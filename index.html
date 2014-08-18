@@ -55,7 +55,7 @@
     }
 
     #chart {
-      width : 600px;
+      width : 400px;
     }
 
     #des {
@@ -140,7 +140,7 @@
     function update(e)
     {
       var sum = 0;
-      for (var i = 1; i <= 8; i++)
+      for (var i = 1; i <= 4; i++)
       {
         var f = parseFloat(document.getElementById("weight" + i).value);
         if (!isNaN(f))
@@ -149,7 +149,7 @@
 
       var r = [];
       var rr = [];
-      for ( var i = 1; i <= 8; i++)
+      for ( var i = 1; i <= 4; i++)
       {
         var f = parseFloat(document.getElementById("weight" + i).value);
         if (!isNaN(f)) {
