@@ -80,15 +80,11 @@
       }
 
       var data = google.visualization.arrayToDataTable([
-        [ "체눈(mm)", "일반", "누적" ],
-        [ "0.075", r[0], rr[0] ],
-        [ "0.106", r[1], rr[1] ],
-        [ "0.250", r[2], rr[2] ],
-        [ "0.425", r[3], rr[3] ],
-        [ "0.850", r[4], rr[4] ],
-        [ "2.000", r[5], rr[5] ],
-        [ "4.750", r[6], rr[6] ],
-        [ "5.600", r[7], rr[7] ],
+        [ "입도(mm)", "일반", "누적" ],
+        [ "0 ~ 1", r[0], rr[0] ],
+        [ "1 ~ 2", r[1], rr[1] ],
+        [ "2 ~ 4", r[2], rr[2] ],
+        [ "4 ~ 5.6", r[3], rr[3] ],
       ]);
 
       var options = {
@@ -113,15 +109,11 @@
   <input id="angle" type="text"></label>--><hr></p>
   <p><table>
     <tr>
-      <td>체눈(mm)</td>
-      <td>0.075</td>
-      <td>0.106</td>
-      <td>0.250</td>
-      <td>0.425</td>
-      <td>0.850</td>
-      <td>2.000</td>
-      <td>4.750</td>
-      <td>5.600</td>
+      <td>입도(mm)</td>
+      <td>0 ~ 1</td>
+      <td>1 ~ 2</td>
+      <td>2 ~ 4</td>
+      <td>4 ~ 5.6</td>
     </tr>
     <tr>
       <td>무게(kg)</td>
@@ -129,10 +121,6 @@
       <td><input id="weight2" name="weight" type="text"></td>
       <td><input id="weight3" name="weight" type="text"></td>
       <td><input id="weight4" name="weight" type="text"></td>
-      <td><input id="weight5" name="weight" type="text"></td>
-      <td><input id="weight6" name="weight" type="text"></td>
-      <td><input id="weight7" name="weight" type="text"></td>
-      <td><input id="weight8" name="weight" type="text"></td>
     </tr>
     <tr>
       <td>비율(%)</td>
@@ -140,10 +128,6 @@
       <td id="ratio2" name="ratio">-</td>
       <td id="ratio3" name="ratio">-</td>
       <td id="ratio4" name="ratio">-</td>
-      <td id="ratio5" name="ratio">-</td>
-      <td id="ratio6" name="ratio">-</td>
-      <td id="ratio7" name="ratio">-</td>
-      <td id="ratio8" name="ratio">-</td>
     </tr>
   </table>
   <hr></p>
@@ -191,10 +175,6 @@
     document.getElementById("weight2").addEventListener("keyup", update);
     document.getElementById("weight3").addEventListener("keyup", update);
     document.getElementById("weight4").addEventListener("keyup", update);
-    document.getElementById("weight5").addEventListener("keyup", update);
-    document.getElementById("weight6").addEventListener("keyup", update);
-    document.getElementById("weight7").addEventListener("keyup", update);
-    document.getElementById("weight8").addEventListener("keyup", update);
 
 /*  document.getElementById("weight1").addEventListener("keyup", function(e) {
       console.log(e.target.value);
