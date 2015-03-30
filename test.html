@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<input type='button' value='test' id='test'>
+<script>
+
+navigator.serviceWorker.register('/test.js').then(function(registration) {
+  console.log('succeed');
+    registration.installing.postMessage('pingping');
+}).catch(function(error) {
+  console.log('failed');
+});
+
+document.querySelector('#test').addEventListener('click', function() {
+  window.navigator.serviceWorker.controller.postMessage('sssdf');
+  alert('ssss');
+}, false);
+
+</script>
+</body>
+</html>
